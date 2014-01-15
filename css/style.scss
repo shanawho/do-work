@@ -1,0 +1,149 @@
+$bg-color: #3498db;
+$dark-accent: #2980b9;
+$text-color: #FFF;
+
+$title-font: Gotham, sans-serif;
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $bg-color;
+
+	font-family: $title-font;
+
+	text-align: center;
+}
+
+h1 {
+	font-size: 5em;
+	margin: 10px 0;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 5px 0;
+	border-bottom: $text-color 2px dotted;
+}
+
+
+
+#todoapp {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 50px;
+	color: $text-color;
+}
+
+#new-list, #new-todo {
+	margin-bottom: 20px;
+}
+
+#lists {
+	margin: 0 auto;
+	padding-left: 0;
+
+	background-color: $bg-color;
+
+	width: 850px;
+	min-height: 300px;
+}
+
+.list-view {
+	float: left;
+	position: relative;
+
+	margin: 0 0 20px 20px;
+	padding: 10px;
+
+	width: 15em;
+	min-height: 20em;
+
+	border: $dark-accent 1px solid;
+	border-radius: 5px;
+	font-family: $title-font;
+
+	&>:firstchild {
+		margin-left: 0;
+	}
+}
+
+li {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.list-destroy {
+	position: absolute;
+	top: 0;
+	right: 5px;
+
+	&:hover {
+		color: $dark-accent;
+	}
+}
+
+.todo-view {
+	margin: 5px 0;
+	padding: 2px;
+	text-align: left;
+}
+
+.todo-destroy {
+	float: right;
+}
+
+.todo-edit, .list-edit {
+	display: none;
+}
+
+.editing-todo {
+	.todo-view {
+		display: none;
+	}
+	.todo-edit {
+		display: inline;
+	}
+}
+
+.editing-list {
+	.list-title {
+		display: none;
+	}
+	.list-edit {
+		display: inline;
+	}
+}
+
+#new-todo {
+	font-family: $title-font;
+
+	text-align: center;
+	width: 15em;
+	height: 2em;
+	border-radius: 1em;
+}
+
+.todo-edit {
+	background-color: #63B8FF;
+	border-style: none;
+	color: $text-color;
+	width: 100%;
+	font-size: 1em;
+	padding: 2px;
+	margin: 0;
+}
+
+input:focus {
+		outline: none;
+	}
+
+.todo-destroy:hover, list-destroy:hover {
+	color: $dark-accent;
+}
+
+
+.done {
+	text-decoration: line-through;
+	color: $dark-accent;
+}
